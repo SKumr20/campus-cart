@@ -1,0 +1,57 @@
+[
+    {
+      "$id": "1", 
+      "user_id": "1",
+      "name": "Wireless Headphones",
+      "description": "High-quality noise-canceling wireless headphones with immersive sound experience.",
+      "price": 150,
+      "age": 1,
+      "condition": "Good",
+      "campus": "VIT Chennai",
+      "image": "product-1.jpg"
+    },
+    {
+      "$id": "2",
+      "user_id": "1",
+      "name": "Smartphone",
+      "description": "Latest model smartphone with high-speed performance and excellent camera quality.",
+      "price": 1000,
+      "age": 2,
+      "condition": "Very Good",
+      "campus": "VIT Vellore",
+      "image": "product-2.jpg"
+    },
+    {
+      "$id": "3",
+      "user_id": "1",
+      "name": "Fiction Novel",
+      "description": "A thrilling fiction novel that keeps you hooked till the last page.",
+      "price": 20,
+      "age": 4,
+      "condition": "Average",
+      "campus": "VIT Vellore",
+      "image": "product-3.jpg"
+    },
+    {
+      "$id": "4",
+      "user_id": "2",
+      "name": "Laptop",
+      "description": "Powerful laptop with high-end specifications for gaming and professional work.",
+      "price": 1200,
+      "age": 0,
+      "condition": "New",
+      "campus": "VIT Chennai",
+      "image": "product-4.jpg"
+    },
+    {
+      "$id": "5",
+      "user_id": "2",
+      "name": "Cookbook",
+      "description": "A comprehensive cookbook with a variety of delicious recipes to try at home.",
+      "price": 35,
+      "age": 1,
+      "condition": "Good",
+      "campus": "VIT Chennai",
+      "image": "product-5.jpg"
+    }
+]
