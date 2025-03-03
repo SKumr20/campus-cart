@@ -1,11 +1,10 @@
 # CAMPUS-CART
 
-### [Visit](https://skumr02-campus-cart.vercel.app/)
-
 A full-stack, Ecommerce application, to buy, sell and explore items around your college/university campus!
 
 
 ## Tech Stack
+
 ### Frontend : 
 1. NextJS
 2. React
@@ -20,8 +19,12 @@ A full-stack, Ecommerce application, to buy, sell and explore items around your 
 
 ### Clone and run this project locally
 
+```bash
+git clone git@github.com:SKumr20/campus-cart.git
 
-First, run the development server:
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
