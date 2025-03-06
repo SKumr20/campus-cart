@@ -30,7 +30,7 @@ const Header = () => {
   }
 
   return (
-    <header className="bg-accent dark:bg-[var(--background)]">
+    <header className="bg-secondary dark:bg-background">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
@@ -40,7 +40,7 @@ const Header = () => {
             <h2 className="text-lg">Campus Cart</h2>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <Button asChild variant="default">
+                <Button asChild variant="outline">
                   <Link href="/" >
                   Products
                   </Link>
@@ -69,12 +69,12 @@ const Header = () => {
           </div>
           {/* <!-- Right Side Menu --> */}
           <div className="ml-auto">
-            <div className="ml-4 flex items-center md:ml-6">
+            <div className="ml-4 flex gap-2 items-center md:ml-6">
               {/* <!-- Logged Out Only --> */}
               { !isAuthenticated && (
                 <>  
-                    <div className="flex gap-1">
-                      <Button variant="secondary">
+                    <div className="flex gap-2">
+                      <Button variant="outline">
                         <MailOpen className="inline"/>
                         <Link
                         href="/login"
