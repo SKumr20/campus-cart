@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import logo from '@/assets/images/logo.svg';
-import { User, LogIn, LogOut, PackageOpen, MailOpen } from 'lucide-react';
+import { User, LogIn, LogOut, PackageOpen, MailOpen, ShoppingBagIcon } from 'lucide-react';
 import destroySession from "@/app/actions/destroySession";
 import toast from "react-hot-toast";
 import { useAuth } from "@/context/authContext";
@@ -35,7 +35,7 @@ const Header = () => {
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <Link href="/">
-              <Image className="h-8 w-8" src={ logo } alt="Campus-cart" priority={true} />
+              <ShoppingBagIcon />
             </Link>
             <h2 className="text-lg">Campus Cart</h2>
             <div className="hidden md:block">
@@ -49,18 +49,21 @@ const Header = () => {
                 {/* <!-- Logged In Only --> */}
                 { isAuthenticated && (
                   <>
-                      <Link
-                      href="/bids"
-                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
-                      >
-                      My Bids
-                      </Link>
-                      <Link
-                        href="/products/add"
-                        className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
-                      >
-                        Add Product
-                      </Link>
+                      <Button variant="outline">
+                        <Link
+                        href="/bids"
+                        >
+                        My Bids
+                        </Link>
+                      </Button>
+                      <Button variant="outline">
+                        <Link
+                          href="/products/add"
+                        >
+                          Add Product
+                        </Link>
+                      </Button>
+
                   </>
                 ) }
 
@@ -98,15 +101,18 @@ const Header = () => {
 
               { isAuthenticated && (
                 <>
-                  <Link href="/products/my">
-                    <PackageOpen className="inline mr-1" /> My Products
-                  </Link>
-                  <button
+                  <Button variant="default">
+                    <PackageOpen className="inline scale-150" />
+                    <Link href="/products/my">
+                      My Products
+                    </Link>
+                  </Button>
+
+                  <Button variant="outline"
                     onClick={handleLogout}
-                    className="mx-3 text-gray-800 hover:text-gray-600"
                   >
                     <LogOut className="inline mr-1" /> Sign Out
-                  </button>
+                  </Button>
                 </>
               )}
               <ThemeSwitch />
@@ -120,7 +126,7 @@ const Header = () => {
         <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
           <Link
             href="/"
-            className="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+            className="block rounded-md px-3 py-2 text-base font-medium text-foreground hover:bg-primary hover:text-primary-foreground"
           >
             Products
           </Link>
@@ -129,13 +135,13 @@ const Header = () => {
             <>
               <Link
                 href="/bids"
-                className="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+                className="block rounded-md px-3 py-2 text-base font-medium text-foreground hover:bg-primary hover:text-primary-foreground"
               >
                 My Bids
               </Link>
               <Link
                 href="/products/add"
-                className="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+                className="block rounded-md px-3 py-2 text-base font-medium text-foreground hover:bg-primary hover:text-primary-foreground"
               >
                 Add Product
               </Link>
