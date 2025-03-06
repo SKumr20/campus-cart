@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import toast, { Toaster } from 'react-hot-toast';
 import AuthWrapper from "@/components/AuthWrapper";
+import Providers from "./providers";
 
 const inter = Inter({subsets: ['latin']});
 
@@ -15,15 +16,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <AuthWrapper>
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning>
         <body
           className={inter.className}>
-            <Header />
-            <main className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-              {children}
-            </main>
-            <Footer />
-            <Toaster />
+            <Providers>
+              <Header />
+              <main className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+                {children}
+              </main>
+              <Footer />
+              <Toaster />
+            </Providers>
         </body>
       </html>
     </AuthWrapper>

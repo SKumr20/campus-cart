@@ -8,6 +8,7 @@ import destroySession from "@/app/actions/destroySession";
 import toast from "react-hot-toast";
 import { useAuth } from "@/context/authContext";
 import { Button } from "./ui/button";
+import { ThemeSwitch } from "./ThemeSwitch";
 
 
 const Header = () => {
@@ -29,7 +30,7 @@ const Header = () => {
   }
 
   return (
-    <header className="bg-gray-100">
+    <header className="bg-[var(--background)]">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
@@ -72,22 +73,25 @@ const Header = () => {
               {/* <!-- Logged Out Only --> */}
               { !isAuthenticated && (
                 <>  
-                    <Button variant="outline">
-                      <MailOpen className="inline"/>
-                      <Link
-                      href="/login"
-                      >
-                      Login
-                      </Link>
-                    </Button>
-                    <Button variant="outline">
-                    <User />
-                      <Link
-                      href="/register"
-                      >
-                      Register
-                      </Link>
-                    </Button>
+                    <div className="flex gap-1">
+                      <Button variant="secondary">
+                        <MailOpen className="inline"/>
+                        <Link
+                        href="/login"
+                        >
+                        Login
+                        </Link>
+                      </Button>
+                      <Button variant="outline">
+                      <User />
+                        <Link
+                        href="/register"
+                        >
+                        Register
+                        </Link>
+                      </Button>
+                    </div>
+
 
                 </>
               )}
@@ -105,6 +109,7 @@ const Header = () => {
                   </button>
                 </>
               )}
+              <ThemeSwitch />
             </div>
           </div>
         </div>
