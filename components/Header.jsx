@@ -30,7 +30,7 @@ const Header = () => {
   }
 
   return (
-    <header className="bg-[var(--background)]">
+    <header className="bg-accent dark:bg-[var(--background)]">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
@@ -40,7 +40,7 @@ const Header = () => {
             <h2 className="text-lg">Campus Cart</h2>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <Button asChild variant="outline">
+                <Button asChild variant="default">
                   <Link href="/" >
                   Products
                   </Link>
