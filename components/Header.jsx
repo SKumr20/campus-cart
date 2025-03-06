@@ -3,10 +3,12 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import logo from '@/assets/images/logo.svg';
-import { User, LogIn, LogOut, PackageOpen } from 'lucide-react';
+import { User, LogIn, LogOut, PackageOpen, MailOpen } from 'lucide-react';
 import destroySession from "@/app/actions/destroySession";
 import toast from "react-hot-toast";
 import { useAuth } from "@/context/authContext";
+import { Button } from "./ui/button";
+
 
 const Header = () => {
   const router = useRouter();
@@ -37,12 +39,11 @@ const Header = () => {
             <h2 className="text-lg">Campus Cart</h2>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <Link
-                  href="/"
-                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
-                >
+                <Button asChild variant="outline">
+                  <Link href="/" >
                   Products
-                </Link>
+                  </Link>
+                </Button>
                 
                 {/* <!-- Logged In Only --> */}
                 { isAuthenticated && (
@@ -70,19 +71,24 @@ const Header = () => {
             <div className="ml-4 flex items-center md:ml-6">
               {/* <!-- Logged Out Only --> */}
               { !isAuthenticated && (
-                <>
-                    <Link
-                    href="/login"
-                    className="mr-3 text-gray-800 hover:text-gray-600"
-                    >
-                    <LogIn className="inline mr-1" /> Login
-                    </Link>
-                    <Link
-                    href="/register"
-                    className="mr-3 text-gray-800 hover:text-gray-600"
-                    >
-                    <User className="inline mr-1" /> Register
-                    </Link>
+                <>  
+                    <Button variant="outline">
+                      <MailOpen className="inline"/>
+                      <Link
+                      href="/login"
+                      >
+                      Login
+                      </Link>
+                    </Button>
+                    <Button variant="outline">
+                    <User />
+                      <Link
+                      href="/register"
+                      >
+                      Register
+                      </Link>
+                    </Button>
+
                 </>
               )}
 
