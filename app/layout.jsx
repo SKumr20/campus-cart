@@ -5,7 +5,6 @@ import Footer from "@/components/Footer";
 import toast, { Toaster } from 'react-hot-toast';
 import AuthWrapper from "@/components/AuthWrapper";
 import Providers from "./providers";
-
 const inter = Inter({subsets: ['latin']});
 
 export const metadata = {

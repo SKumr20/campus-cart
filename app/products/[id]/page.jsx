@@ -20,11 +20,11 @@ const ProductPage = async ({ params }) => {
 
   return (
     <>  
-        <Heading title={ product.name } />
-        <div className="bg-white shadow rounded-lg p-6">
+        <Heading title={ product.name }  />
+        <div className="bg-popover shadow rounded-lg p-6">
         <Link
           href="/"
-          className="flex items-center text-gray-600 hover:text-gray-800 mb-4"
+          className="flex items-center text-primary hover:text-primary/90 mb-4"
         >
           <ChevronLeft className='inline mr-1' />
           <span className="ml-2">Back to Products</span>
@@ -40,24 +40,24 @@ const ProductPage = async ({ params }) => {
           />
 
           <div className="mt-4 sm:mt-0 sm:flex-1">
-            <p className="text-gray-600 mb-4">
+            <p className="text-accent-foreground mb-4">
                 { product.description }
             </p>
 
             <ul className="space-y-2">
               <li>
-                <span className="font-semibold text-gray-800">Age: </span> {product.age} Years
+                <span className="font-semibold text-accent-foreground">Age: </span> {product.age} Years
               </li>
               <li>
-                <span className="font-semibold text-gray-800">Condition: </span>
+                <span className="font-semibold text-accent-foreground">Condition: </span>
                 {product.condition}
               </li>
               <li>
-                <span className="font-semibold text-gray-800">Price: </span>
+                <span className="font-semibold text-accent-foreground">Price: </span>
                 Rs {product.price} 
               </li>
               <li>
-                <span className="font-semibold text-gray-800">Campus: </span>
+                <span className="font-semibold text-accent-foreground">Campus: </span>
                 {product.campus}
               </li>
             </ul>

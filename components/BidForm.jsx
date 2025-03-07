@@ -27,7 +27,7 @@ const BidForm = ({ product }) => {
           <div>
             <label
               htmlFor='bid_price'
-              className='block text-sm font-medium text-gray-700'
+              className='block text-sm font-medium text-popover-foreground'
             >
               Enter Your Bid Price
             </label>
@@ -35,14 +35,14 @@ const BidForm = ({ product }) => {
               type='number'
               id='bid_price'
               name='bid_price'
-              className='mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm'
+              className='mt-1 block w-full px-3 py-2 border border-outline rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm'
               required
             />
           </div>
           <div>
             <label
               htmlFor='user_contact'
-              className='block text-sm font-medium text-gray-700'
+              className='block text-sm font-medium text-popover-foreground'
             >
               Your Contact
             </label>
@@ -50,7 +50,7 @@ const BidForm = ({ product }) => {
               type='text'
               id='user_contact'
               name='user_contact'
-              className='mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm'
+              className='mt-1 block w-full px-3 py-2 border border-outline rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm'
               required
             />
           </div>
