@@ -12,7 +12,7 @@ const bidsPage = async () => {
     <>
       <Heading  title='My Bids' />
       { bids.length === 0 ? (
-        <p className="text-gray-600 mt-4"> You have no bids! </p>
+        <p className="text-foreground mt-4"> You have no bids! </p>
       ) : (
         bids.map((bid) => <ProductBidCard key={bid.$id} bid={bid} />)
       )}
