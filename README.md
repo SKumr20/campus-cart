@@ -2,6 +2,12 @@
 
 A full-stack, Ecommerce application, to buy, sell and explore items around your college/university campus!
 
+
+![Home Page](<public/images/loginpage.png>)
+![Page 2](<public/images/1.png>)
+![Page 3](<public/images/2.png>)
+
+
 ## Features
 
 1. Login/Register
