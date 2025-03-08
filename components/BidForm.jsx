@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { useActionState } from 'react';
 import toast from 'react-hot-toast';
 import bidProduct from '@/app/actions/bidProduct';
+import { Button } from './ui/button';
 
 const BidForm = ({ product }) => {
   const [state, formAction] = useActionState(bidProduct, {});
@@ -56,13 +57,13 @@ const BidForm = ({ product }) => {
           </div>
         </div>
 
-        <div className='mt-6'>
-          <button
+        <div className='mt-6 flex items-center justify-center'>
+          <Button
             type='submit'
-            className='w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800'
+            // className='w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800'
           >
             Submit Your Bid
-          </button>
+          </Button>
         </div>
       </form>
     </div>
