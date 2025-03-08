@@ -7,9 +7,12 @@ export default async function Home() {
   return (
     <>
       <Heading title='Available Products' />
-      {products.length > 0 ? (
-        products.map((product) => <ProductCard key={product.$id} product={product} />) 
-      ) : (<p>No products available.</p>) }
+      <div className='mb-20'>
+        {products.length > 0 ? (
+          products.map((product) => <ProductCard key={product.$id} product={product} />) 
+        ) : (<p>No products available.</p>) }
+      </div>
+
     </>
   );
 }

@@ -24,17 +24,17 @@ const AddProductPage = () => {
   return (
     <>
         <Heading title="Add a product" />
-        <div className="bg-white shadow-lg rounded-lg p-6 w-full">
+        <div className="bg-card shadow-lg rounded-lg p-6 w-full mb-20">
             <form action={formAction}>
             <div className="mb-4">
-                <label htmlFor="name" className="block text-gray-700 font-bold mb-2"
+                <label htmlFor="name" className="block text-card-foreground font-bold mb-2"
                 >Product Name</label
                 >
                 <input
                 type="text"
                 id="name"
                 name="name"
-                className="border rounded w-full py-2 px-3"
+                className="border border-outline rounded w-full py-2 px-3"
                 placeholder="Enter product name"
                 required
                 />
@@ -47,7 +47,7 @@ const AddProductPage = () => {
                 <textarea
                 id="description"
                 name="description"
-                className="border rounded w-full h-24 py-2 px-3"
+                className="border border-outline rounded w-full h-24 py-2 px-3"
                 placeholder="Enter a description for the Product"
                 required
                 ></textarea>
@@ -61,7 +61,7 @@ const AddProductPage = () => {
                 type="text"
                 id="campus"
                 name="campus"
-                className="border rounded w-full py-2 px-3"
+                className="border border-outline rounded w-full py-2 px-3"
                 placeholder="Enter campus/college name"
                 required
                 />
@@ -75,7 +75,7 @@ const AddProductPage = () => {
                 type="text"
                 id="condition"
                 name="condition"
-                className="border rounded w-full py-2 px-3"
+                className="border border-outline rounded w-full py-2 px-3"
                 placeholder="Enter product condition: Excellent/Very Good/Good/Average etc."
                 required
                 />
@@ -92,21 +92,21 @@ const AddProductPage = () => {
                 type="number"
                 id="price"
                 name="price"
-                className="border rounded w-full py-2 px-3"
+                className="border border-outline rounded w-full py-2 px-3"
                 placeholder="Enter price"
                 required
                 />
             </div>
 
             <div className="mb-4">
-                <label htmlFor="address" className="block text-gray-700 font-bold mb-2"
+                <label htmlFor="age" className="block text-gray-700 font-bold mb-2"
                 >Age</label
                 >
                 <input
                 type="text"
                 id="age"
                 name="age"
-                className="border rounded w-full py-2 px-3"
+                className="border border-outline rounded w-full py-2 px-3"
                 placeholder="Enter product age"
                 required
                 />
@@ -122,14 +122,14 @@ const AddProductPage = () => {
                 type="file"
                 id="image"
                 name="image"
-                className="border rounded w-full py-2 px-3"
+                className="border border-outline rounded w-full py-2 px-3"
                 />
             </div>
 
             <div className="flex flex-col gap-5">
                 <button
                 type="submit"
-                className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
+                className="bg-primary text-white px-4 py-2 rounded hover:bg-blue-700"
                 >
                 Save
                 </button>

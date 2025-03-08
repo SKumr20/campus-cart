@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "./ui/button";
 
 
 const ProductCard = ({ product }) => {
@@ -12,7 +13,7 @@ const ProductCard = ({ product }) => {
 
   return (
     <div
-        className="bg-white shadow rounded-lg p-4 mt-4 flex flex-col sm:flex-row justify-between items-start sm:items-center"
+        className="bg-card shadow rounded-lg p-4 mt-4 flex flex-col sm:flex-row justify-between items-start sm:items-center"
       >
         <div className="flex flex-col sm:flex-row sm:space-x-4">
           <Image
@@ -24,16 +25,16 @@ const ProductCard = ({ product }) => {
           />
           <div className="space-y-1">
             <h4 className="text-lg font-semibold">{product.name}</h4>
-            <p className="text-sm text-gray-600">
-              <span className="font-semibold text-gray-800"> Address: </span>
+            <p className="text-sm text-muted-foreground">
+              <span className="font-semibold text-card-foreground"> Address: </span>
               {product.campus}
             </p>
-            <p className="text-sm text-gray-600">
-              <span className="font-semibold text-gray-800">Age: </span>
+            <p className="text-sm text-muted-foreground">
+              <span className="font-semibold text-card-foreground">Age: </span>
               {product.age}
             </p>
-            <p className="text-sm text-gray-600">
-              <span className="font-semibold text-gray-800"> Price: </span>
+            <p className="text-sm text-muted-foreground">
+              <span className="font-semibold text-card-foreground"> Price: </span>
               Rs {product.price} 
             </p>
           </div>
@@ -41,11 +42,14 @@ const ProductCard = ({ product }) => {
         <div
           className="flex flex-col sm:flex-row w-full sm:w-auto sm:space-x-2 mt-2 sm:mt-0"
         >
-          <Link
-            href={ `/products/${product.$id}` }
-            className="bg-blue-500 text-white px-4 py-2 rounded mb-2 sm:mb-0 w-full sm:w-auto text-center hover:bg-blue-700"
-            >View Product
-            </Link>
+          <Button variant="default" size='lg'>
+            <Link
+              href={ `/products/${product.$id}` }
+              className="text-md"
+              >View Product
+            </Link>     
+          </Button>
+
         </div>
       </div>
   );
