@@ -36,7 +36,7 @@ const BidForm = ({ product }) => {
               type='number'
               id='bid_price'
               name='bid_price'
-              className='mt-1 block w-full px-3 py-2 border border-outline rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm'
+              className='flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2'
               required
             />
           </div>
@@ -51,7 +51,7 @@ const BidForm = ({ product }) => {
               type='text'
               id='user_contact'
               name='user_contact'
-              className='mt-1 block w-full px-3 py-2 border border-outline rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm'
+              className='flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2'
               required
             />
           </div>

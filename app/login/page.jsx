@@ -5,6 +5,7 @@ import { useActionState, useEffect } from "react";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/authContext";
+import { Button } from "@/components/ui/button";
 
 const LoginPage = () => {
 
@@ -56,16 +57,18 @@ const LoginPage = () => {
               </div>
 
               <div className="flex flex-col gap-5">
-                <button
+                <Button variant="default"
                   type="submit"
-                  className="bg-primary text-white dark:text-foreground px-4 py-2 rounded hover:bg-primary/90"
                 >
                   Login
-                </button>
+                </Button>
 
                 <p>
                   No account?
-                  <Link href="/register" className="text-blue-500"> Register</Link>
+                  <Button variant="link">
+                    <Link href="/register"> Register</Link>
+                  </Button>
+                  
                 </p>
               </div>
             </form>

@@ -5,6 +5,8 @@ import { useActionState } from "react";
 import { useRouter } from 'next/navigation'
 import toast from "react-hot-toast";
 import createUser from "@/app/actions/createUser";
+import { Button } from "@/components/ui/button";
+import { MailOpen } from "lucide-react";
 
 
 const RegisterPage = () => {
@@ -22,47 +24,50 @@ const RegisterPage = () => {
 
   return (
     <div className="flex items-center justify-center">
-        <div className="bg-white shadow-lg rounded-lg p-6 w-full max-w-sm mt-20">
+        <div className="bg-card shadow-lg rounded-lg p-6 w-full max-w-sm mt-10">
           <form action={formAction}>
-            <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
-              Register
+            <h2 className="text-2xl font-bold text-center text-card-foreground mb-6">
+              Join Campus Cart
             </h2>
 
             <div className="mb-4">
-              <label htmlFor="name" className="block text-gray-700 font-bold mb-2"
+              <label htmlFor="name" className="block text-card-foreground mb-2"
                 >Name</label
               >
               <input
                 type="text"
                 id="name"
                 name="name"
-                className="border rounded w-full py-2 px-3"
+                placeholder="Name"
+                className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
                 required
               />
             </div>
 
             <div className="mb-4">
-              <label htmlFor="email" className="block text-gray-700 font-bold mb-2"
+              <label htmlFor="email" className="block text-card-foreground mb-2"
                 >Email</label
               >
               <input
                 type="email"
                 id="email"
                 name="email"
-                className="border rounded w-full py-2 px-3"
+                placeholder="Email"
+                className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
                 required
               />
             </div>
 
             <div className="mb-4">
-              <label htmlFor="password" className="block text-gray-700 font-bold mb-2"
+              <label htmlFor="password" className="block text-card-foreground mb-2"
                 >Password</label
               >
               <input
                 type="password"
                 id="password"
                 name="password"
-                className="border rounded w-full py-2 px-3"
+                placeholder="********"
+                className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
                 required
               />
             </div>
@@ -70,14 +75,15 @@ const RegisterPage = () => {
             <div className="mb-6">
               <label
                 htmlFor="confirm-password"
-                className="block text-gray-700 font-bold mb-2"
+                className="block text-card-foreground mb-2"
                 >Confirm Password</label
               >
               <input
                 type="password"
                 id="confirm-password"
                 name="confirm-password"
-                className="border rounded w-full py-2 px-3"
+                placeholder="********"
+                className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
                 required
               />
             </div>
@@ -92,7 +98,9 @@ const RegisterPage = () => {
 
               <p>
                 Have an account?
-                <Link href="/login" className="text-blue-500"> Login</Link>
+                <Button variant="link">
+                  <Link href="/login"> Login</Link>
+                </Button>
               </p>
             </div>
           </form>
