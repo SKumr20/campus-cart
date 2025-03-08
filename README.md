@@ -2,6 +2,12 @@
 
 A full-stack, Ecommerce application, to buy, sell and explore items around your college/university campus!
 
+## Features
+
+1. Login/Register
+2. View and add/delete products, with image uploading
+3. Add Bids for products
+
 ## Tech Stack
 
 ### Frontend : 
